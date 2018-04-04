@@ -22,9 +22,10 @@ run;
 *Example;
 %let name=Chinki Rai;
 %let classname=stat6863;
+%let hello=Hello;
 
 data _null_;
-	put "Hello,&classname.! This is &name.!";
+	put "&hello.,&classname.! This is &name.!";
 run;
 
 /*
