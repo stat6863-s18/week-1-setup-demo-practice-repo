@@ -20,9 +20,14 @@ run;
 */
 
 *Example;
+%let name=Chinki Rai;
+%let classname=stat6863;
+%let hello=Hello;
+
 data _null_;
-    put 'Hello, World!';
+	put "&hello.,&classname.! This is &name.!";
 run;
+
 /*
 Notes:
 (1) In this example, single-quotes have been used to delimit the string literal 'Hello, World!', meaning we know the string is everything between the opening and closing single-quote marks. However, the recipe used double-quote marks. In general, either single-quotes or double-quotes can be used to delimit SAS string literals, but double-quotes should be used whenever so-called macro variables are included in string literals, as we'll see later. (For now, just remember that SAS treats single- and double-quotes differently for something called macros.)
@@ -39,11 +44,14 @@ Approach: Use a null data step and business logic to write to the log
 */
 
 *Example;
+*With the use of Macros;
+%let mod_5= 5;
+
 data _null_;
     do i = 1 to 100;
         if mod(i,3) = 0 then put 'Fizz';
-        else if mod(i, 5) = 0 then put 'Buzz';
-        else put i=;
+        else if mod(i, &mod_5.) = 0 then put 'Buzz';
+	   else put i=;
     end;
 run;
 )
