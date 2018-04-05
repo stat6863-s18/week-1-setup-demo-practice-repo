@@ -68,3 +68,5 @@ which starts with the value 1 and is incremented by 1 repeatedly.
 to prepare/clean data for analysis. This type of programming is commonly called "business logic"
 since it encapsulated domain-specific behavior, here to solve a specific programming challenge.
 */
+
+/*This practice of doing changes to incorporate these changes in pull request automatically;
