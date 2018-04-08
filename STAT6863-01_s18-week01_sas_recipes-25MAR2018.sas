@@ -18,10 +18,10 @@ data _null_;
     put "<message>";
 run;
 */
-
+/*Testing*/
 *Example;
 data _null_;
-    put 'Hello, World!';
+    put 'Hello, World! This is Adam Jauregui. Demonstrating Github Flow.';
 run;
 /*
 Notes:
@@ -41,7 +41,8 @@ Approach: Use a null data step and business logic to write to the log
 *Example;
 data _null_;
     do i = 1 to 100;
-        if mod(i,3) = 0 then put 'Fizz';
+		if mod(i,10) = 0 then put 'FizzBuzz';
+        else if mod(i,3) = 0 then put 'Fizz';
         else if mod(i, 5) = 0 then put 'Buzz';
         else put i=;
     end;
@@ -52,3 +53,4 @@ Notes:
 (1) In this example, the four main components of imperative programming are used: (1) The variable i is used to hold a value that varies; (2) the mod function is called with behavior dependent on a variable's current value (e.g., mod(i,3) evaluates to 0 if i is divisible by 3, and is 1 otherwise); (3) conditional statement execution in the form an if-else if-else branching structure, where only one of the three branches is executed, depending upon whether i is divisible by 3, by 5, or by neither; and (4) looping in the form of the do-loop repeating the same block of code (the 3-line if-else if-else branching structure) 100 times, once for each value of i, which starts with the value 1 and is incremented by 1 repeatedly.
 (2) In general, SAS data steps will use these four components, in addition to dataset access methods, to prepare/clean data for analysis. This type of programming is commonly called "business logic" since it encapsulated domain-specific behavior, here to solve a specific programming challenge.
 */
+/*Third edit to the same file.*/
